@@ -1,11 +1,12 @@
 {
-  "name": "@lightningjs/sdk",
-  "version": "5.3.0",
+  "name": "@velope/lightningjs-sdk",
+  "version": "5.3.1",
   "license": "Apache-2.0",
   "types": "index.d.ts",
   "scripts": {
     "postinstall": "node ./scripts/postinstall.js",
     "lint": "eslint '**/*.js'",
+    "lint:fix": "eslint src --ext .js,.ts --fix",
     "release": "npm publish --access public",
     "typedoc": "typedoc --tsconfig tsconfig.typedoc.json",
     "tsd": "tsd"
