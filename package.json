@@ -54,9 +54,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:rdkcentral/Lightning-SDK.git"
+    "url": "git+https://github.com/Velope/Velope-Lightning-SDK.git"
   },
   "bugs": {
-    "url": "https://github.com/rdkcentral/Lightning-SDK/issues"
+    "url": "https://github.com/Velope/Velope-Lightning-SDK/issues"
   }
 }

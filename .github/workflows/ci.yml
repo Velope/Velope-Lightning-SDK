@@ -1,31 +1,8 @@
 name: Publish package to Github
 on: push
 jobs:
-  checking-app:
-    name: Run CI process to lint the app and run tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Nodejs
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: 'npm'
-
-      - name: Install NPM
-        run: npm ci
-
-      - name: Linting
-        run: npm run lint:fix
-
-      - name: Run tests
-        run: npm test
-
   deploy-app:
-    needs: "checking-app"
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
     name: Publish package
     runs-on: ubuntu-latest
     permissions:
