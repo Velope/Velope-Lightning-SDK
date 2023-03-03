@@ -571,7 +571,7 @@ declare module '../../index.js' {
        * }
        * ```
        */
-      widgets: Router.WidgetContainer
+      widgets: [TypeConfig['IsPage']] extends [true] ? Router.WidgetContainer : unknown;
 
       /**
        * Page Params (Lightning SDK Router Pages only)
@@ -581,7 +581,7 @@ declare module '../../index.js' {
        *
        * Added by [Lightning SDK Router](https://lightningjs.io/docs/#/lightning-sdk-reference/plugins/router/index)
        */
-      params: Router.PageParams | undefined
+      params: [TypeConfig['IsPage']] extends [true] ? Router.PageParams | undefined : unknown;
 
       /**
        * Overridable method used to control how this Page transitions (Lightning SDK Router Pages only)
